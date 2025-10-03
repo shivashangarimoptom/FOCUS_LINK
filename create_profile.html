@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your FocusLink Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-eye"></i> FocusLink
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li> 
+                    <li><a href="jobs.html">Jobs</a></li> 
+                    <li><a href="mentorship.html">Mentorship</a></li> 
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="#" class="btn btn-primary nav-btn">Login</a>
+                <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="form-page-main">
+        <div class="container">
+            <h1 class="section-heading"><i class="fas fa-user-plus"></i> Create Your FocusLink Profile</h1>
+            <p class="section-description">Join the global eyecare community. Fill out the essential details to get started, and enhance your profile at your own pace!</p>
+
+            <div class="profile-completeness-indicator">
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 25%;"></div> <!-- Placeholder for JS to update -->
+                </div>
+                <span class="completeness-text">Profile 25% Complete</span>
+                <i class="fas fa-info-circle tooltip-icon" data-tooltip="Completing more sections makes your profile more discoverable and impactful!"></i>
+            </div>
+
+            <form class="profile-form">
+                <!-- Section 1: Account & Primary Details (Required fields) -->
+                <fieldset class="form-section">
+                    <legend><i class="fas fa-id-card"></i> Account & Primary Details <span class="required-note">* Required fields</span></legend>
+                    <div class="form-group">
+                        <label for="full-name">Full Name <span class="required-asterisk">*</span></label>
+                        <input type="text" id="full-name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email <span class="required-asterisk">*</span></label>
+                        <input type="email" id="email" placeholder="Your professional email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password <span class="required-asterisk">*</span></label>
+                        <input type="password" id="password" placeholder="Create a password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-picture">Profile Picture (Headshot)</label>
+                        <input type="file" id="profile-picture" accept="image/*">
+                        <small class="form-description">A professional headshot helps others recognize you. (Optional)</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-banner">Profile Banner Image</label>
+                        <input type="file" id="profile-banner" accept="image/*">
+                        <small class="form-description">Upload a banner for your profile header. (Optional)</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-type">I am a... <span class="required-asterisk">*</span></label>
+                        <select id="profile-type" required>
+                            <option value="">Select your primary role</option>
+                            <option value="student">Student</option>
+                            <option value="optometrist">Optometrist</option>
+                            <option value="ophthalmologist">Ophthalmologist</option>
+                            <option value="allied-ophthalmic-personnel">Allied Ophthalmic Personnel</option>
+                            <option value="vision-scientist">Vision Scientist / Researcher (Non-Clinical)</option>
+                            <option value="optical-lab-professional">Optical Lab Professional / Technician</option>
+                            <option value="eyecare-business-consultant">Eyecare Business / Practice Management Consultant</option>
+                            <option value="public-health-official">Public Health Official / Policy Maker (Eyecare Focus)</option>
+                            <option value="academician">Academician</option>
+                            <option value="association">Association Representative</option>
+                            <option value="college">College / University Representative</option>
+                            <option value="hospital">Hospital / Clinic Representative</option>
+                            <option value="optician">Optician</option>
+                            <option value="industry">Industry / Manufacturer Representative</option>
+                        </select>
+                         <small class="form-description">This defines the primary type of your profile.</small>
+                    </div>
+                     <div class="form-group">
+                        <label for="profile-title">Your Role / Title</label>
+                        <input type="text" id="profile-title" placeholder="e.g., Pediatric Optometrist, Glaucoma Specialist, CEO" >
+                        <small class="form-description">Your specific role or sub-specialty. (Optional)</small>
+                    </div>
+                </fieldset>
+
+                <!-- Section 2: Personal & Professional Information (Optional fields) -->
+                <fieldset class="form-section">
+                    <legend><i class="fas fa-info-circle"></i> Personal & Professional Info <span class="optional-note">(Optional)</span></legend>
+                    <div class="form-group">
+                        <label for="about">About Me</label>
+                        <textarea id="about" rows="5" placeholder="Tell us about your background, passions, and professional journey."></textarea>
+                        <small class="form-description">A detailed bio helps others understand your expertise. (Optional)</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="location-city">City</label>
+                        <input type="text" id="location-city" placeholder="Your current city">
+                         <small class="form-description">Helps people find you locally. (Optional)</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="location-country">Country</label>
+                        <input type="text" id="location-country" placeholder="Your current country">
+                        <small class="form-description">For global connectivity. (Optional)</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="languages">Languages Spoken (comma-separated)</label>
+                        <input type="text" id="languages" placeholder="e.g., English, Spanish, French">
+                        <small class="form-description">List languages you can communicate professionally in. (Optional)</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn Profile URL</label>
+                        <input type="url" id="linkedin" placeholder="https://www.linkedin.com/in/yourprofile">
+                        <small class="form-description">Link to your professional LinkedIn profile. (Optional)</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="website">Personal/Clinic/Organization Website (Optional)</label>
+                        <input type="url" id="website" placeholder="https://yourwebsite.com">
+                        <small class="form-description">Provide a link to your professional website. (Optional)</small>
+                    </div>
+                </fieldset>
+
+                <!-- Section 3: Specialties & Expertise (Optional, multiple select or tags would be better with JS) -->
+                <fieldset class="form-section">
+                    <legend><i class="fas fa-lightbulb"></i> Specialties & Expertise <span class="optional-note">(Optional)</span></legend>
+                    <p class="form-description">Select all areas where you have specialized knowledge or practice. Holding CTRL/CMD allows multiple selections.</p>
+                    <div class="form-group">
+                        <label for="specialty-areas">Clinical / Professional Areas</label>
+                        <select id="specialty-areas" multiple size="10"> 
+                            <optgroup label="Optometry Specialties">
+                                <option value="binocular-vision">Binocular Vision</option>
+                                <option value="vision-therapy">Vision Therapy</option>
+                                <option value="pediatric-optometry">Pediatric Optometry</option>
+                                <option value="geriatric-optometry">Geriatric Optometry</option>
+                                <option value="neuro-optometry">Neuro-Optometry</option>
+                                <option value="myopia-control-specialist">Myopia Control Specialist</option>
+                                <option value="community-optometrist">Community Optometrist</option>
+                                <option value="low-vision-rehabilitation">Low Vision & Rehabilitation</option>
+                                <option value="ocular-surface-disease">Ocular Surface Disease (OSD)</option>
+                                <option value="contact-lenses">Contact Lenses</option>
+                                <option value="diabetic-eye-care">Diabetic Eye Care</option>
+                                <option value="tele-optometry">Tele-Optometry</option>
+                                <option value="practice-management">Practice Management (Optometric)</option>
+                                <option value="eye-banking-optometric">Eye Banking (Optometric Role)</option>
+                                <option value="spectacle-dispensing">Spectacle Dispensing Expertise</option>
+                                <option value="home-eye-testing">Home Eye Testing</option>
+                            </optgroup>
+                            <optgroup label="Ophthalmology Specialties">
+                                <option value="cornea-external-disease">Cornea & External Disease Specialist</option>
+                                <option value="glaucoma">Glaucoma Specialist</option>
+                                <option value="retina-vitreous">Retina/Vitreous Specialist</option>
+                                <option value="oculoplastic-surgeon">Oculoplastic Surgeon</option>
+                                <option value="pediatric-ophthalmologist">Pediatric Ophthalmologist</option>
+                                <option value="neuro-ophthalmologist">Neuro-Ophthalmologist</option>
+                                <option value="uveitis-specialist">Uveitis Specialist</option>
+                                <option value="refractive-surgeon">Refractive Surgeon / LASIK Specialist</option>
+                                <option value="ocular-oncology">Ocular Oncology Specialist</option>
+                                <option value="comprehensive-ophthalmologist">Comprehensive Ophthalmologist</option>
+                            </optgroup>
+                             <optgroup label="General / Other Specialties">
+                                <option value="clinical-trials">Clinical Trials & Research Coordination</option>
+                                <option value="curriculum-development">Curriculum Development</option>
+                                <option value="medical-writing">Medical Writing / Scientific Communication</option>
+                                <option value="eyewear-styling">Eyewear Styling & Fashion</option>
+                                <option value="advanced-dispensing">Advanced Dispensing</option>
+                                <option value="frame-repair">Frame Repair & Adjustment</option>
+                                <option value="product-development">Product Development & Innovation</option>
+                                <option value="regulatory-affairs">Regulatory Affairs</option>
+                                <option value="clinical-affairs-industry">Clinical Affairs (Industry)</option>
+                                <option value="sales-marketing-eyecare">Sales & Marketing (Eyecare)</option>
+                                <option value="hospital-admin-eyecare">Hospital Administration (Eyecare Dept.)</option>
+                                <option value="clinic-management">Clinic Management</option>
+                                <option value="ophthalmic-surgical-assisting">Ophthalmic Surgical Assisting</option>
+                                <option value="tele-optometry-platform">Tele-Optometry Platform Development</option>
+                                <option value="ai-in-eyecare">Artificial Intelligence in Eyecare</option>
+                                <option value="big-data-vision">Big Data Analytics in Vision Care</option>
+                                <option value="global-health-vision">Global Health Optometry/Ophthalmology</option>
+                                <option value="veterinary-ophthalmology">Veterinary Ophthalmology</option>
+                                <option value="ophthalmic-technician">Ophthalmic Technician</option>
+                                <option value="ophthalmic-assistant">Ophthalmic Assistant</option>
+                                <option value="ophthalmic-scribe">Ophthalmic Scribe</option>
+                                <option value="ophthalmic-photographer">Ophthalmic Photographer</option>
+                                <option value="certified-optometric-assistant">Certified Optometric Assistant (COA)</option>
+                                <option value="optical-lab-technician">Optical Lab Technician</option>
+                            </optgroup>
+                        </select>
+                        <small class="form-description">This helps others find you based on your specific skills.</small>
+                    </div>
+                </fieldset>
+
+                <!-- Section 4: Availability & Offerings (Optional) -->
+                <fieldset class="form-section">
+                    <legend><i class="fas fa-hand-holding-heart"></i> Availability & Offerings <span class="optional-note">(Optional)</span></legend>
+                    <p class="form-description">Indicate services or opportunities you provide and your current status.</p>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="home-eye-screening">
+                        <label for="home-eye-screening">Available for Home Eye Screening</label>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="provide-training">
+                        <label for="provide-training">Available to Provide Training / Internships</label>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="mentorship-available">
+                        <label for="mentorship-available">Available as a Mentor</label>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="tele-optometry">
+                        <label for="tele-optometry">Offers Tele-Optometry Services</label>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="instruments-for-sale-rental">
+                        <label for="instruments-for-sale-rental">Offers Instruments/Equipment for Rental or Sales</label>
+                        <textarea id="instrument-details" rows="2" placeholder="Describe instruments/equipment (e.g., Portable Slit Lamp, OCT). Will appear if checked." class="hidden-field"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-status">Your Current Profile Status</label>
+                        <select id="profile-status">
+                            <option value="engaged">Engaged (Actively practicing, not seeking new roles)</option>
+                            <option value="ready-to-work">Ready to Work (Seeking new opportunities)</option>
+                            <option value="hiring">Hiring (Looking for talent for your organization)</option>
+                            <option value="mentor-expecting">Mentor Expecting (Student/new grad seeking a mentor)</option>
+                        </select>
+                        <small class="form-description">Let others know your current professional intentions.</small>
+                    </div>
+                     <div class="form-group">
+                        <label for="looking-for">I am currently looking for:</label>
+                        <textarea id="looking-for" rows="3" placeholder="e.g., Professional Collaborations, Research Partners, Speaking Engagements, New Talent for Mentorship, Full-time Optometrist Position."></textarea>
+                        <small class="form-description">Specify what you seek within the community. (Optional)</small>
+                    </div>
+                </fieldset>
+
+                <!-- Section 5: Experience & Education (Optional, would be dynamic with JS in full app) -->
+                <fieldset class="form-section">
+                    <legend><i class="fas fa-briefcase"></i> Experience & Education <span class="optional-note">(Optional)</span></legend>
+                    <p class="form-description">Add your work history and academic achievements. You can add multiple entries.</p>
+                    
+                    <h4>Work Experience</h4>
+                    <div id="experience-entries">
+                        <div class="experience-entry">
+                            <div class="form-group">
+                                <label>Job Title</label>
+                                <input type="text" placeholder="e.g., Lead Optometrist">
+                            </div>
+                            <div class="form-group">
+                                <label>Company/Organization</label>
+                                <input type="text" placeholder="e.g., NY Vision Associates">
+                            </div>
+                            <div class="form-group two-column-grid">
+                                <div class="form-group">
+                                    <label>Start Date</label>
+                                    <input type="month">
+                                </div>
+                                <div class="form-group">
+                                    <label>End Date (or 'Present')</label>
+                                    <input type="month">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Key Responsibilities/Achievements</label>
+                                <textarea rows="3" placeholder="Describe your role and accomplishments."></textarea>
+                            </div>
+                             <button type="button" class="btn btn-outline small-btn remove-entry-btn"><i class="fas fa-minus-circle"></i> Remove Experience</button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-outline small-btn add-more-btn" data-target="experience-entries" data-template="experience-template"><i class="fas fa-plus-circle"></i> Add More Experience</button>
+
+                    <h4 class="mt-20">Education</h4>
+                    <div id="education-entries">
+                        <div class="education-entry">
+                            <div class="form-group">
+                                <label>Degree/Certification</label>
+                                <input type="text" placeholder="e.g., Doctor of Optometry (OD)">
+                            </div>
+                            <div class="form-group">
+                                <label>Institution</label>
+                                <input type="text" placeholder="e.g., SUNY College of Optometry">
+                            </div>
+                            <div class="form-group">
+                                <label>Graduation Year</label>
+                                <input type="number" min="1950" max="2099" step="1" placeholder="YYYY">
+                            </div>
+                            <button type="button" class="btn btn-outline small-btn remove-entry-btn"><i class="fas fa-minus-circle"></i> Remove Education</button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-outline small-btn add-more-btn" data-target="education-entries" data-template="education-template"><i class="fas fa-plus-circle"></i> Add More Education</button>
+                </fieldset>
+
+                <!-- Section 6: Publications, Awards, Affiliations, etc. (Optional) -->
+                <fieldset class="form-section">
+                    <legend><i class="fas fa-trophy"></i> Achievements & Affiliations <span class="optional-note">(Optional)</span></legend>
+                    <div class="form-group">
+                        <label for="publications">Publications (URLs or Citations)</label>
+                        <textarea id="publications" rows="4" placeholder="List your peer-reviewed publications, articles, or book chapters."></textarea>
+                        <small class="form-description">Showcase your research and scholarly contributions.</small>
+                    </div>
+                     <div class="form-group">
+                        <label for="presentations">Presentations / Speaking Engagements</label>
+                        <textarea id="presentations" rows="4" placeholder="List conferences, webinars, or workshops where you've presented."></textarea>
+                        <small class="form-description">Highlight your public speaking and educational contributions.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="awards">Awards & Recognitions</label>
+                        <textarea id="awards" rows="3" placeholder="List any professional awards, grants, or special recognitions."></textarea>
+                        <small class="form-description">Any accolades for your work or service. (Optional)</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="professional-affiliations">Professional Associations & Affiliations</label>
+                        <textarea id="professional-affiliations" rows="3" placeholder="e.g., American Optometric Association (AOA), American Academy of Ophthalmology, COVD."></textarea>
+                        <small class="form-description">List the professional bodies you are a member of. (Optional)</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="portfolio-url">Portfolio / Case Studies URL</label>
+                        <input type="url" id="portfolio-url" placeholder="https://yourportfolio.com">
+                        <small class="form-description">Link to your online portfolio or case studies, if applicable (e.g., for vision therapy, oculoplastics). (Optional)</small>
+                    </div>
+                </fieldset>
+
+
+                <!-- Final Submit Button -->
+                <div class="form-submit-section">
+                    <button type="submit" class="btn btn-primary btn-large">Create My Profile</button>
+                    <button type="button" class="btn btn-outline btn-large save-later-btn"><i class="fas fa-save"></i> Save & Continue Later</button>
+                    <p class="terms-note">By clicking "Create My Profile", you agree to FocusLink's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+                </div>
+            </form>
+
+            <!-- Templates for dynamic add/remove - these would be cloned by JS -->
+            <template id="experience-template">
+                <div class="experience-entry">
+                    <div class="form-group">
+                        <label>Job Title</label>
+                        <input type="text" placeholder="e.g., Lead Optometrist">
+                    </div>
+                    <div class="form-group">
+                        <label>Company/Organization</label>
+                        <input type="text" placeholder="e.g., NY Vision Associates">
+                    </div>
+                    <div class="form-group two-column-grid">
+                        <div class="form-group">
+                            <label>Start Date</label>
+                            <input type="month">
+                        </div>
+                        <div class="form-group">
+                            <label>End Date (or 'Present')</label>
+                            <input type="month">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Key Responsibilities/Achievements</label>
+                        <textarea rows="3" placeholder="Describe your role and accomplishments."></textarea>
+                    </div>
+                    <button type="button" class="btn btn-outline small-btn remove-entry-btn"><i class="fas fa-minus-circle"></i> Remove Experience</button>
+                </div>
+            </template>
+
+            <template id="education-template">
+                <div class="education-entry">
+                    <div class="form-group">
+                        <label>Degree/Certification</label>
+                        <input type="text" placeholder="e.g., Doctor of Optometry (OD)">
+                    </div>
+                    <div class="form-group">
+                        <label>Institution</label>
+                        <input type="text" placeholder="e.g., SUNY College of Optometry">
+                    </div>
+                    <div class="form-group">
+                        <label>Graduation Year</label>
+                        <input type="number" min="1950" max="2099" step="1" placeholder="YYYY">
+                    </div>
+                    <button type="button" class="btn btn-outline small-btn remove-entry-btn"><i class="fas fa-minus-circle"></i> Remove Education</button>
+                </div>
+            </template>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-col">
+                <a href="index.html" class="logo footer-logo">
+                    <i class="fas fa-eye"></i> FocusLink
+                </a>
+                <p>Connecting the world of vision care.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>For Professionals</h4>
+                <ul>
+                    <li><a href="#">Create a Profile</a></li>
+                    <li><a href="#">List Your Clinic</a></li>
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#">Tele-Optometry Solutions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Community</h4>
+                <ul>
+                    <li><a href="#">Articles & Insights</a></li>
+                    <li><a href="#">Events & Webinars</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a href="#">Mentorship Program</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright container">
+            <p>&copy; 2024 FocusLink. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Basic JS for form interactivity -->
+    <script>
+        // Toggle visibility of instrument details textarea
+        document.getElementById('instruments-for-sale-rental').addEventListener('change', function() {
+            const instrumentDetails = document.getElementById('instrument-details');
+            if (this.checked) {
+                instrumentDetails.classList.remove('hidden-field');
+            } else {
+                instrumentDetails.classList.add('hidden-field');
+            }
+        });
+
+        // Dynamic Add/Remove functionality for Experience and Education
+        document.querySelectorAll('.add-more-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const targetId = this.dataset.target;
+                const templateId = this.dataset.template;
+                const targetContainer = document.getElementById(targetId);
+                const template = document.getElementById(templateId);
+
+                if (targetContainer && template) {
+                    const newEntry = template.content.cloneNode(true);
+                    targetContainer.appendChild(newEntry);
+                }
+            });
+        });
+
+        // Event listener for removing dynamically added entries
+        document.addEventListener('click', function(event) {
+            if (event.target.classList.contains('remove-entry-btn')) {
+                event.target.closest('.experience-entry, .education-entry').remove();
+            }
+        });
+
+        // Basic JS for mobile menu toggle (placeholder, requires full menu implementation)
+        // document.querySelector('.menu-toggle').addEventListener('click', function() {
+        //     document.querySelector('.nav-links').classList.toggle('active');
+        // });
+    </script>
+
+</body>
+</html>

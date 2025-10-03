@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusLink - Your Global Eyecare Community</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-eye"></i> FocusLink
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li> 
+                    <li><a href="jobs.html">Jobs</a></li> 
+                    <li><a href="mentorship.html">Mentorship</a></li> 
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="create_profile.html" class="btn btn-primary nav-btn">Join Now</a> 
+                <!-- Mobile menu toggle button -->
+                <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>Connect. Grow. Advance in Eyecare.</h1>
+                <p>The unified platform for optometry students and professionals worldwide. Discover opportunities, mentorship, and a vibrant community.</p>
+                
+                <div class="search-bar-container">
+                    <input type="text" placeholder="Search professionals, jobs, organizations...">
+                    <button class="btn btn-secondary"><i class="fas fa-search"></i> Search</button>
+                    
+                    <!-- Advanced Filters Toggle -->
+                    <div class="advanced-filters-toggle">
+                        <button class="btn btn-outline small-btn">
+                            <i class="fas fa-filter"></i> Filters
+                        </button>
+                        <div class="filters-dropdown">
+                            <h4>Filter by:</h4>
+                            <div class="filter-group">
+                                <label for="profile-type">Profile Type/Category:</label>
+                                <select id="profile-type">
+                                    <option value="">All Profiles</option>
+                                    <option value="student">Student</option>
+                                    <option value="optometrist">Optometrist</option>
+                                    <option value="ophthalmologist">Ophthalmologist</option>
+                                    <option value="allied-ophthalmic-personnel">Allied Ophthalmic Personnel</option>
+                                    <option value="vision-scientist">Vision Scientist / Researcher</option>
+                                    <option value="optical-lab-professional">Optical Lab Professional</option>
+                                    <option value="eyecare-business-consultant">Eyecare Business / Practice Management Consultant</option>
+                                    <option value="public-health-official">Public Health Official (Eyecare)</option>
+                                    <option value="academician">Academician</option>
+                                    <option value="association">Association Representative</option>
+                                    <option value="college">College / University Representative</option>
+                                    <option value="hospital">Hospital / Clinic Representative</option>
+                                    <option value="optician">Optician</option>
+                                    <option value="industry">Industry / Manufacturer Representative</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label for="specialty-area">Clinical/Professional Area:</label>
+                                <select id="specialty-area">
+                                    <option value="">Any Area</option>
+                                    <optgroup label="Optometry Specialties">
+                                        <option value="binocular-vision">Binocular Vision</option>
+                                        <option value="vision-therapy">Vision Therapy</option>
+                                        <option value="pediatric-optometry">Pediatric Optometry</option>
+                                        <option value="geriatric-optometry">Geriatric Optometry</option>
+                                        <option value="neuro-optometry">Neuro-Optometry</option>
+                                        <option value="myopia-control-specialist">Myopia Control Specialist</option>
+                                        <option value="community-optometrist">Community Optometrist</option>
+                                        <option value="low-vision-rehabilitation">Low Vision & Rehabilitation</option>
+                                        <option value="ocular-surface-disease">Ocular Surface Disease (OSD)</option>
+                                        <option value="contact-lenses">Contact Lenses</option>
+                                        <option value="diabetic-eye-care">Diabetic Eye Care</option>
+                                        <option value="tele-optometry">Tele-Optometry</option>
+                                        <option value="practice-management">Practice Management (Optometric)</option>
+                                        <option value="eye-banking-optometric">Eye Banking (Optometric Role)</option>
+                                        <option value="spectacle-dispensing">Spectacle Dispensing Expertise</option>
+                                        <option value="home-eye-testing">Home Eye Testing</option>
+                                    </optgroup>
+                                    <optgroup label="Ophthalmology Specialties">
+                                        <option value="cornea-external-disease">Cornea & External Disease Specialist</option>
+                                        <option value="glaucoma">Glaucoma Specialist</option>
+                                        <option value="retina-vitreous">Retina/Vitreous Specialist</option>
+                                        <option value="oculoplastic-surgeon">Oculoplastic Surgeon</option>
+                                        <option value="pediatric-ophthalmologist">Pediatric Ophthalmologist</option>
+                                        <option value="neuro-ophthalmologist">Neuro-Ophthalmologist</option>
+                                        <option value="uveitis-specialist">Uveitis Specialist</option>
+                                        <option value="refractive-surgeon">Refractive Surgeon / LASIK Specialist</option>
+                                        <option value="ocular-oncology">Ocular Oncology Specialist</option>
+                                        <option value="comprehensive-ophthalmologist">Comprehensive Ophthalmologist</option>
+                                    </optgroup>
+                                    <optgroup label="General / Other Specialties">
+                                        <option value="clinical-trials">Clinical Trials & Research Coordination</option>
+                                        <option value="curriculum-development">Curriculum Development</option>
+                                        <option value="medical-writing">Medical Writing / Scientific Communication</option>
+                                        <option value="eyewear-styling">Eyewear Styling & Fashion</option>
+                                        <option value="advanced-dispensing">Advanced Dispensing</option>
+                                        <option value="frame-repair">Frame Repair & Adjustment</option>
+                                        <option value="product-development">Product Development & Innovation</option>
+                                        <option value="regulatory-affairs">Regulatory Affairs</option>
+                                        <option value="clinical-affairs-industry">Clinical Affairs (Industry)</option>
+                                        <option value="sales-marketing-eyecare">Sales & Marketing (Eyecare)</option>
+                                        <option value="hospital-admin-eyecare">Hospital Administration (Eyecare Dept.)</option>
+                                        <option value="clinic-management">Clinic Management</option>
+                                        <option value="ophthalmic-surgical-assisting">Ophthalmic Surgical Assisting</option>
+                                        <option value="tele-optometry-platform">Tele-Optometry Platform Development</option>
+                                        <option value="ai-in-eyecare">Artificial Intelligence in Eyecare</option>
+                                        <option value="big-data-vision">Big Data Analytics in Vision Care</option>
+                                        <option value="global-health-vision">Global Health Optometry/Ophthalmology</option>
+                                        <option value="veterinary-ophthalmology">Veterinary Ophthalmology</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label for="location-city">City:</label>
+                                <input type="text" id="location-city" placeholder="e.g., New York, London">
+                            </div>
+                            <div class="filter-group">
+                                <label for="location-country">Country:</label>
+                                <input type="text" id="location-country" placeholder="e.g., USA, UK">
+                            </div>
+                            <div class="filter-group">
+                                <label for="profile-status">Profile Status:</label>
+                                <select id="profile-status">
+                                    <option value="">Any</option>
+                                    <option value="ready-to-work">Ready to Work</option>
+                                    <option value="hiring">Hiring</option>
+                                    <option value="mentor-expecting">Mentor Expecting</option>
+                                    <option value="engaged">Engaged</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-primary apply-filters-btn">Apply Filters</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="create_profile.html" class="btn btn-primary">Create Your Free Profile</a> 
+                    <a href="directory.html" class="btn btn-outline">Explore Full Directory</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="value-prop-section">
+            <div class="container">
+                <div class="value-prop-grid">
+                    <div class="value-prop-item">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Connect Globally</h3>
+                        <p>Network with peers, specialists, and organizations worldwide.</p>
+                    </div>
+                    <div class="value-prop-item">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Discover Opportunities</h3>
+                        <p>Find jobs, events, and mentorship tailored to your career path.</p>
+                    </div>
+                    <div class="value-prop-item">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Advance Your Career</h3>
+                        <p>Share knowledge, access resources, and foster professional growth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <div class="container">
+                <h2 class="section-heading"><i class="fas fa-user-md"></i> Featured Professionals</h2>
+                <div class="card-container">
+                    <div class="card professional-card">
+                        <div class="card-avatar">DR</div>
+                        <h3>Dr. Evelyn Reed</h3>
+                        <p>Pediatric Optometry</p>
+                        <span class="profile-tag engaged">Engaged</span>
+                        <a href="profile.html" class="card-link">View Profile</a>
+                    </div>
+                    <div class="card professional-card">
+                        <div class="card-avatar">SC</div>
+                        <h3>Dr. Samuel Chen</h3>
+                        <p>Ocular Surface Disease</p>
+                        <span class="profile-tag engaged">Engaged</span>
+                        <a href="profile.html" class="card-link">View Profile</a>
+                    </div>
+                    <div class="card professional-card">
+                        <div class="card-avatar">CA</div>
+                        <h3>Dr. Chloe Adams</h3>
+                        <p>Medical Optometry</p>
+                        <span class="profile-tag ready-to-work">Ready to Work</span>
+                        <a href="profile.html" class="card-link">View Profile</a>
+                    </div>
+                    <div class="card professional-card">
+                        <div class="card-avatar">KT</div>
+                        <h3>Dr. Kenji Tanaka</h3>
+                        <p>Practice Management</p>
+                        <span class="profile-tag engaged">Engaged</span>
+                        <a href="profile.html" class="card-link">View Profile</a>
+                    </div>
+                </div>
+                <div class="view-all-link"><a href="directory.html">View All Professionals <i class="fas fa-arrow-right"></i></a></div>
+            </div>
+        </section>
+
+        <section class="job-opportunities-section bg-light-gray">
+            <div class="container">
+                <h2 class="section-heading"><i class="fas fa-bullhorn"></i> Latest Job Opportunities</h2>
+                <p class="section-description">Find your next role in hospitals, opticals, education, or industry.</p>
+                <div class="card-container">
+                    <div class="card job-card">
+                        <h3>Optometrist - Clinical Practice</h3>
+                        <p class="job-meta"><i class="fas fa-hospital"></i> Metropolitan General Hospital</p>
+                        <p class="job-meta"><i class="fas fa-map-marker-alt"></i> New York, USA</p>
+                        <span class="job-tag full-time">Full-Time</span>
+                        <a href="#" class="card-link">Apply Now</a>
+                    </div>
+                    <div class="card job-card">
+                        <h3>Contact Lens Specialist</h3>
+                        <p class="job-meta"><i class="fas fa-store"></i> The Visionary Optique</p>
+                        <p class="job-meta"><i class="fas fa-map-marker-alt"></i> London, UK</p>
+                        <span class="job-tag part-time">Part-Time</span>
+                        <a href="#" class="card-link">Apply Now</a>
+                    </div>
+                    <div class="card job-card">
+                        <h3>Research Fellow - Ophthalmic Devices</h3>
+                        <p class="job-meta"><i class="fas fa-flask"></i> Ophthalmic Solutions Inc.</p>
+                        <p class="job-meta"><i class="fas fa-map-marker-alt"></i> Boston, USA</p>
+                        <span class="job-tag full-time">Full-Time</span>
+                        <a href="#" class="card-link">Apply Now</a>
+                    </div>
+                </div>
+                <div class="view-all-link"><a href="jobs.html">View All Job Openings <i class="fas fa-arrow-right"></i></a></div>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <div class="container">
+                <h2 class="section-heading"><i class="fas fa-calendar-alt"></i> Upcoming Events & Webinars</h2>
+                <div class="card-container">
+                    <div class="card event-card">
+                        <span class="event-type">Webinar</span>
+                        <h3>Advances in Glaucoma Management</h3>
+                        <p class="event-date"><i class="fas fa-clock"></i> Oct 25, 2024</p>
+                        <a href="#" class="card-link">Register Now</a>
+                    </div>
+                    <div class="card event-card">
+                        <span class="event-type">Workshop</span>
+                        <h3>Pediatric Vision Screening</h3>
+                        <p class="event-date"><i class="fas fa-clock"></i> Nov 12, 2024</p>
+                        <a href="#" class="card-link">Register Now</a>
+                    </div>
+                    <div class="card event-card">
+                        <span class="event-type">Conference</span>
+                        <h3>Future of Contact Lens Technology</h3>
+                        <p class="event-date"><i class="fas fa-clock"></i> Dec 01, 2024</p>
+                        <a href="#" class="card-link">Register Now</a>
+                    </div>
+                    <div class="card event-card">
+                        <span class="event-type">Webinar</span>
+                        <h3>AI in Eye Care Diagnostics</h3>
+                        <p class="event-date"><i class="fas fa-clock"></i> Dec 15, 2024</p>
+                        <a href="#" class="card-link">Register Now</a>
+                    </div>
+                </div>
+                <div class="view-all-link"><a href="#">View All Events <i class="fas fa-arrow-right"></i></a></div>
+            </div>
+        </section>
+
+        <section class="mentorship-cta-section">
+            <div class="container text-center">
+                <h2 class="section-heading"><i class="fas fa-hands-helping"></i> Mentorship Program</h2>
+                <p>Connect with experienced professionals or guide the next generation. Foster growth, share knowledge, and build lasting relationships.</p>
+                <div class="cta-buttons">
+                    <a href="mentorship.html" class="btn btn-primary">Find a Mentor</a>
+                    <a href="mentorship.html" class="btn btn-outline">Become a Mentor</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="student-directory-section bg-light-gray">
+            <div class="container">
+                <h2 class="section-heading"><i class="fas fa-user-graduate"></i> Student Network</h2>
+                <p class="section-description">Connect with your peers, find study partners, and explore future career paths.</p>
+                <div class="card-container">
+                    <div class="card student-card">
+                        <div class="card-avatar">MG</div>
+                        <h3>Maria Garcia</h3>
+                        <p>Nova Southeastern University</p>
+                        <span class="profile-tag mentor-expecting">Mentor Expecting</span>
+                        <a href="profile.html" class="card-link">View Profile</a>
+                    </div>
+                    <div class="card student-card">
+                        <div class="card-avatar">LJ</div>
+                        <h3>Liam Johnson</h3>
+                        <p>SUNY College of Optometry</p>
+                        <span class="profile-tag ready-to-work">Ready to Work</span>
+                        <a href="profile.html" class="card-link">View Profile</a>
+                    </div>
+                    <div class="card student-card">
+                        <div class="card-avatar">AK</div>
+                        <h3>Aisha Khan</h3>
+                        <p>Illinois College of Optometry</p>
+                        <span class="profile-tag mentor-expecting">Mentor Expecting</span>
+                        <a href="profile.html" class="card-link">View Profile</a>
+                    </div>
+                </div>
+                <div class="view-all-link"><a href="directory.html?type=student">View All Students <i class="fas fa-arrow-right"></i></a></div>
+            </div>
+        </section>
+
+        <section class="join-cta-section bg-primary-gradient">
+            <div class="container text-center">
+                <h2>Join the Global Eyecare Community Today!</h2>
+                <p>Create your free profile and start connecting, learning, and growing with FocusLink.</p>
+                <a href="create_profile.html" class="btn btn-light btn-large">Sign Up For Free</a> 
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-col">
+                <a href="index.html" class="logo footer-logo">
+                    <i class="fas fa-eye"></i> FocusLink
+                </a>
+                <p>Connecting the world of vision care.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>For Professionals</h4>
+                <ul>
+                    <li><a href="#">Create a Profile</a></li>
+                    <li><a href="#">List Your Clinic</a></li>
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#">Tele-Optometry Solutions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Community</h4>
+                <ul>
+                    <li><a href="#">Articles & Insights</a></li>
+                    <li><a href="#">Events & Webinars</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a href="#">Mentorship Program</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright container">
+            <p>&copy; 2024 FocusLink. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for dynamic filter toggle (simplified) -->
+    <script>
+        document.querySelector('.advanced-filters-toggle button').addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevent document click from closing it immediately
+            document.querySelector('.filters-dropdown').classList.toggle('show');
+        });
+
+        // Close dropdown if clicked outside
+        window.addEventListener('click', function(e) {
+            const filtersDropdown = document.querySelector('.filters-dropdown');
+            const filtersToggle = document.querySelector('.advanced-filters-toggle');
+            if (filtersDropdown.classList.contains('show') && !filtersToggle.contains(e.target)) {
+                filtersDropdown.classList.remove('show');
+            }
+        });
+
+        // Basic JS for mobile menu toggle (placeholder, requires full menu implementation)
+        // document.querySelector('.menu-toggle').addEventListener('click', function() {
+        //     document.querySelector('.nav-links').classList.toggle('active');
+        // });
+    </script>
+
+</body>
+</html>
